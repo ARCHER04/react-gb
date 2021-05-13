@@ -1,0 +1,14 @@
+.header{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    width: 300px;
+    border: 1px solid black;
+
+}
+.sidebar{
+    border: 1px solid black;
+    width: 100px;
+    list-style-type: none;
+    height: 100px;
+}

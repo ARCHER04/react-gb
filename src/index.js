@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
-import MyApp from './App';
+import { Routes } from './Routes';
 
 
-ReactDOM.render(<MyApp />, document.getElementById("root"));
+ReactDOM.render(<Routes />, document.getElementById("root"));
