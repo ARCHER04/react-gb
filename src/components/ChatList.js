@@ -18,7 +18,7 @@ export const ChatList = () => {
       <ul >
         {chats.map((chat) => (
           <li key={chat.id}>
-            <Link to={`chats/${chat.id}`}>{chat.name}</Link>
+            <Link to={`/chats/${chat.id}`}>{chat.name}</Link>
           </li>
         ))}
       </ul>
