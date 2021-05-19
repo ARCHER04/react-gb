@@ -8,10 +8,8 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import { ChatList } from "./components/ChatList";
+import { ConnectedProfile as Profile } from './components/Profile';
 
-const Profile = ({ routerProp }) => {
-  return <div>Yes , it is profile</div>;
-};
 
 export const Routes = () => {
   return (
@@ -31,7 +29,7 @@ export const Routes = () => {
         
       <Switch>
         <Route path="/" exact>
-        <ChatList />
+   
         </Route>
         <Route path="/chats/:chatId" exact>
          <App />
