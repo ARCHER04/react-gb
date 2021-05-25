@@ -1,4 +1,4 @@
-import { AUTHORS } from "../../const/const";
+import { AUTHORS } from "../../utils/constants";
 
 export const ADD_MESSAGE = "MESSAGES::ADD_MESSAGE";
 
