@@ -8,7 +8,6 @@ module.exports = {
     path: path.join(__dirname, "dist"),
     filename: "bundle.js",
     publicPath: "/",
-    
   },
   devServer: {
     historyApiFallback: true,
@@ -29,7 +28,6 @@ module.exports = {
       },
     ],
   },
-  
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
@@ -41,6 +39,3 @@ module.exports = {
     }),
   ],
 };
-expressApp.get('/*', (request, response) => {
-  response.sendFile(path.join(__dirname, '../public/index.html'));
-});

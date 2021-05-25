@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import {connect } from "react-redux";
-
-//import { store } from "../../store";
 import {  changeName } from "./../store/profile/actions";
 
 
