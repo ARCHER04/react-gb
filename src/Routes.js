@@ -1,9 +1,38 @@
-import React, {} from "react";
+import React, {  } from "react";
 import { BrowserRouter, Switch,  Route } from "react-router-dom";
-import App from "./components/App";
+import { ChatList } from "./components/ChatList";
+import MessageField from "./components/MessageField";
+import { Profile } from "./components/Profile";
 import { Header } from "./components/Header";
-import { ConnectedProfile as Profile } from './components/Profile';
+import { AUTHORS } from "./utils/constants";
+import { Articles } from "./components/Articles";
 
+const initialChats = [
+  {
+    name: "Chat1",
+    id: "chat1",
+  },
+  {
+    name: "Chat2",
+    id: "chat2",
+  },
+  {
+    name: "Chat3",
+    id: "chat3",
+  },
+];
+
+const initialMessages = {
+  chat1: [
+    { author: AUTHORS.HUMAN, text: "Hello" },
+    { author: AUTHORS.BOT, text: "hi" },
+  ],
+  chat2: [
+    { author: AUTHORS.HUMAN, text: "this is chat 2" },
+    { author: AUTHORS.HUMAN, text: "hello" },
+  ],
+  chat3: [],
+};
 
 export const Routes = () => {
   return (
@@ -12,15 +41,19 @@ export const Routes = () => {
 
       <Switch>
         <Route path="/" exact>
- 
+          <ChatList />
         </Route>
 
         <Route path="/profile">
           <Profile />
         </Route>
 
+        <Route path="/articles">
+          <Articles />
+        </Route>
+
         <Route path="/chats/:chatId?">
-          <App />
+          <MessageField />
         </Route>
 
         <Route path="*">
